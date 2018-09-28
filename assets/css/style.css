@@ -1,0 +1,937 @@
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #ffffff;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.smallBold {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+
+header {
+    width: 100%;
+    height: 450px;
+    background-image: url(../img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+header .logo {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 10px 0 0 30px;
+}
+
+header .logo svg {
+    width: 50px;
+    height: 50px;
+}
+
+header .logo svg path {
+    fill: rgba(0, 0, 0, 0.4);
+}
+
+header nav {
+    float: right;
+    margin: 30px 30px 0 0;
+}
+
+header nav a {
+    display: inline-block;
+    margin: 0 0 0 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+header span {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    border: 10px solid #fff;
+}
+
+header h1 {
+    font-size: 72px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 100px 0 0 0;
+    clear: both;
+    overflow: hidden;
+}
+
+header .kicker {
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+    line-height: 1;
+}
+
+@media screen and (max-width: 700px) {
+    header .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding-top: 20px;
+    }
+
+    header nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: 30px 0 0 0;
+        padding: 0 10px;
+    }
+
+    header nav a:first-of-type {
+        margin: 0;
+    }
+}
+
+
+/* about section */
+#about {
+    padding: 100px 0;
+}
+
+#about h3 {
+    color: #e1c184;
+    text-align: center;
+    padding: 0 0 30px 0;
+}
+
+#about .faceLockup {
+    max-width: 780px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+#about .faceLockup .iconPencil {
+    order: 1;
+}
+
+#about .faceLockup .iconMouse {
+    order: 2;
+}
+
+#about .faceLockup .faceImg {
+    order: 3;
+}
+
+#about .faceLockup .faceImg div {
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/face.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#about .faceLockup .iconBrowser {
+    order: 4;
+}
+
+#about .faceLockup .iconVideo {
+    order: 3;
+}
+
+#about .faceLockup [class^="icon"] {
+    width: 100px;
+    height: 100px;
+    background-color: #e5eaee;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .faceLockup [class^="icon"] svg path {
+    fill: #c99065;
+}
+
+#about .blurb {
+    max-width: 620px;
+    padding: 0 15px;
+    margin: 50px auto;
+}
+
+#about .blurb p {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 300;
+    color: #666;
+}
+
+@media screen and (max-width: 650px) {
+    #about .faceLockup {
+        flex-wrap: wrap;
+    }
+
+    #about .faceLockup div {
+        margin: 10px;
+    }
+
+    #about .faceLockup .faceImg {
+       width: 100%;
+       order: 1;
+       margin: 0 0 30px 0;
+    }
+
+    #about .faceLockup .faceImg div {
+        margin: 0 auto;
+    }
+}
+
+#about .skillLockup {
+    max-width: 700px;
+    margin: 100px auto 0 auto;
+}
+
+#about .skillLockup .skillUnit {
+    width: 350px;
+    float: left;
+}
+
+#about .skillLockup .skillUnit .skillLabel {
+    color: #999;
+}
+
+#about .skillLockup .skillUnit .skillIcons {
+    font-size: 0;
+    margin: 0 0 30px 0;
+}
+
+#about .skillLockup .skillUnit .skillIcons span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #c99065;
+    margin: 0 5px 0 0;
+    border-radius: 50%;
+}
+
+#about .skillLockup .skillUnit .skillIcons span::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+#about .skillLockup .skillUnit .skill10 span:nth-child(n+11) {
+    background-color: #e5eaee;
+}
+
+#about .skillLockup .skillUnit .skill9 span:nth-child(n+10) {
+    background-color: #e5eaee;
+}
+
+#about .skillLockup .skillUnit .skill8 span:nth-child(n+9) {
+    background-color: #e5eaee;
+}
+
+#about .skillLockup .skillUnit .skill7 span:nth-child(n+8) {
+    background-color: #e5eaee;
+}
+
+#about .skillLockup .skillUnit .skill6 span:nth-child(n+7) {
+    background-color: #e5eaee;
+}
+
+#about .skillLockup .skillUnit .skill5 span:nth-child(n+6) {
+    background-color: #e5eaee;
+}
+
+@media screen and (max-width: 541px) {
+    #about .skillLockup {
+        width: 270px;
+    }
+
+    #about .skillLockup .skillUnit {
+        width: auto;
+    }
+}
+
+
+/* work section */
+
+#work {
+    background-color: #e5eaee;
+    padding: 100px 0 100px 0;
+    overflow-x: hidden;
+}
+
+#work h3 {
+    text-align: center;
+    padding: 0 0 30px 0;
+    color: #e1c184;
+}
+
+#work .workBelt {
+    width: 200%;
+    position: relative;
+    left: 0%;
+    transition: left 0.5s ease;
+}
+
+#work .workBelt .thumbWrap, 
+#work .workBelt .workWrap {
+    width: 50%;
+    float: left;
+}
+
+#work .thumbContainer {
+    max-width: 960px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#work .thumbContainer .thumbUnit {
+    display: block;
+    float: left;
+    width: 25%;
+    padding: 16% 0 0 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+#work .thumbContainer .thumbUnit .thumbOverlay {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(201, 144, 101, 0.8);
+    overflow: hidden;
+    transition: top 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#work .thumbContainer .thumbUnit:hover .thumbOverlay {
+    top: 0;
+}
+
+#work .thumbContainer .thumbUnit .thumbOverlay strong {
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#work .workBelt .workWrap .workContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+}
+
+#work .workBelt .workWrap .workContainer h4 {
+    color: #c99065;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+
+#work .workBelt .workWrap .workContainer .workReturn {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: -2px;
+    left: -60px;;
+}
+
+#work .workBelt .workWrap .workContainer .workReturn svg path {
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+#work .workBelt .workWrap .workContainer .workReturn:hover svg path {
+    fill: rgba(0, 0, 0, 0.7);
+}
+
+#work .workBelt .workWrap .workContainer img {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+}
+
+@media screen and (max-width: 760px) {
+    #work .thumbContainer .thumbUnit {
+        width: 50%;
+        padding:26% 0 0 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #work .thumbContainer .thumbUnit {
+        width: 100%;
+        padding:40% 0 0 0;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    #work .workBelt .workWrap .workContainer .workReturn {
+        left: 0;
+    }
+
+    #work .workBelt .workWrap .workContainer h4 {
+        margin-left: 60px;
+    }
+}
+
+
+/* clients section */
+
+#clients {
+    padding: 100px 0px 50px 0px;
+    position: relative;
+}
+
+#clients h3 {
+    color: #e1c184;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#clients .clientControls {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 5;
+}
+
+#clients .clientControls div, #clients .clientControls div svg {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+}
+
+#clients .clientControls .clientControlNext {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    cursor: pointer;
+}
+
+#clients .clientControls .clientControlPrev {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    cursor: pointer;
+}
+
+#clients .clientsMobileNav {
+    text-align: center;
+    display: none;
+}
+
+#clients .clientsMobileNav span {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #e5eaee;
+    margin: 0px 10px;
+}
+
+#clients .clientsMobileNav span.activeClient {
+    border-color: #c99065;
+}
+
+#clients .clientsBelt {
+    width: 100%;
+    position: relative;
+}
+
+#clients .clientsBelt .clientUnit {
+    max-width: 750px;
+    margin: 50px auto;
+    position: relative;
+    z-index: 1;
+    display: none;
+}
+
+#clients .clientsBelt .clientUnit.activeClient {
+    display: flex;
+    animation-name: animationBounce;
+    animation-duration: 1s;
+    -webkit-animation-name: animationBounce;
+    -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes animationBounce { 
+    0% {height: 0%; width: 0%; -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    3.333333% {height: 100%; width: 100%; -webkit-transform: matrix3d(0.34323, 0.11487, 0, 0, 0.07506, 0.34323, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.34323, 0.11487, 0, 0, 0.07506, 0.34323, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    6.666667% { -webkit-transform: matrix3d(0.65416, 0.2159, 0, 0, 0.14115, 0.65416, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.65416, 0.2159, 0, 0, 0.14115, 0.65416, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    10% { -webkit-transform: matrix3d(0.88518, 0.18431, 0, 0, 0.1219, 0.88518, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.88518, 0.18431, 0, 0, 0.1219, 0.88518, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    13.333333% { -webkit-transform: matrix3d(1.02792, 0.0976, 0, 0, 0.06496, 1.02792, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.02792, 0.0976, 0, 0, 0.06496, 1.02792, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    16.666667% { -webkit-transform: matrix3d(1.09602, 0.02621, 0, 0, 0.01747, 1.09602, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.09602, 0.02621, 0, 0, 0.01747, 1.09602, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    20% { -webkit-transform: matrix3d(1.1117, -0.0094, 0, 0, -0.00627, 1.1117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.1117, -0.0094, 0, 0, -0.00627, 1.1117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    23.333333% { -webkit-transform: matrix3d(1.09709, -0.01805, 0, 0, -0.01203, 1.09709, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.09709, -0.01805, 0, 0, -0.01203, 1.09709, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    26.666667% { -webkit-transform: matrix3d(1.0698, -0.0143, 0, 0, -0.00954, 1.0698, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.0698, -0.0143, 0, 0, -0.00954, 1.0698, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    30% { -webkit-transform: matrix3d(1.04151, -0.00794, 0, 0, -0.0053, 1.04151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.04151, -0.00794, 0, 0, -0.0053, 1.04151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    33.333333% { -webkit-transform: matrix3d(1.01844, -0.00306, 0, 0, -0.00204, 1.01844, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.01844, -0.00306, 0, 0, -0.00204, 1.01844, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    36.666667% { -webkit-transform: matrix3d(1.00277, -0.00038, 0, 0, -0.00025, 1.00277, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00277, -0.00038, 0, 0, -0.00025, 1.00277, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    40% { -webkit-transform: matrix3d(0.99411, 0.00064, 0, 0, 0.00043, 0.99411, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99411, 0.00064, 0, 0, 0.00043, 0.99411, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    43.333333% { -webkit-transform: matrix3d(0.99083, 0.00076, 0, 0, 0.0005, 0.99083, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99083, 0.00076, 0, 0, 0.0005, 0.99083, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    46.666667% { -webkit-transform: matrix3d(0.991, 0.00053, 0, 0, 0.00035, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.991, 0.00053, 0, 0, 0.00035, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    50% { -webkit-transform: matrix3d(0.99292, 0.00027, 0, 0, 0.00018, 0.99292, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99292, 0.00027, 0, 0, 0.00018, 0.99292, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    53.333333% { -webkit-transform: matrix3d(0.99535, 0.00008, 0, 0, 0.00006, 0.99535, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99535, 0.00008, 0, 0, 0.00006, 0.99535, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    56.666667% { -webkit-transform: matrix3d(0.99755, -0.00001, 0, 0, 0, 0.99755, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99755, -0.00001, 0, 0, 0, 0.99755, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    60% { -webkit-transform: matrix3d(0.99919, -0.00004, 0, 0, -0.00002, 0.99919, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99919, -0.00004, 0, 0, -0.00002, 0.99919, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    63.333333% { -webkit-transform: matrix3d(1.0002, -0.00003, 0, 0, -0.00002, 1.0002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.0002, -0.00003, 0, 0, -0.00002, 1.0002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    66.666667% { -webkit-transform: matrix3d(1.00068, -0.00002, 0, 0, -0.00001, 1.00068, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00068, -0.00002, 0, 0, -0.00001, 1.00068, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    70% { -webkit-transform: matrix3d(1.00079, -0.00001, 0, 0, -0.00001, 1.00079, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00079, -0.00001, 0, 0, -0.00001, 1.00079, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    73.333333% { -webkit-transform: matrix3d(1.00069, 0, 0, 0, 0, 1.00069, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00069, 0, 0, 0, 0, 1.00069, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    76.666667% { -webkit-transform: matrix3d(1.00049, 0, 0, 0, 0, 1.00049, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00049, 0, 0, 0, 0, 1.00049, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    80% { -webkit-transform: matrix3d(1.00029, 0, 0, 0, 0, 1.00029, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00029, 0, 0, 0, 0, 1.00029, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    83.333333% { -webkit-transform: matrix3d(1.00013, 0, 0, 0, 0, 1.00013, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00013, 0, 0, 0, 0, 1.00013, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    86.666667% { -webkit-transform: matrix3d(1.00002, 0, 0, 0, 0, 1.00002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00002, 0, 0, 0, 0, 1.00002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    90% { -webkit-transform: matrix3d(0.99996, 0, 0, 0, 0, 0.99996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99996, 0, 0, 0, 0, 0.99996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    93.333333% { -webkit-transform: matrix3d(0.99994, 0, 0, 0, 0, 0.99994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99994, 0, 0, 0, 0, 0.99994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    96.666667% { -webkit-transform: matrix3d(0.99994, 0, 0, 0, 0, 0.99994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99994, 0, 0, 0, 0, 0.99994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% {height: 100%; width: 100%;  -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+  }
+  
+  @keyframes animationBounce { 
+    0% {height: 0%; width: 0%;  -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    3.333333% {height: 100%; width: 100%;  -webkit-transform: matrix3d(0.34323, 0.11487, 0, 0, 0.07506, 0.34323, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.34323, 0.11487, 0, 0, 0.07506, 0.34323, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    6.666667% { -webkit-transform: matrix3d(0.65416, 0.2159, 0, 0, 0.14115, 0.65416, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.65416, 0.2159, 0, 0, 0.14115, 0.65416, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    10% { -webkit-transform: matrix3d(0.88518, 0.18431, 0, 0, 0.1219, 0.88518, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.88518, 0.18431, 0, 0, 0.1219, 0.88518, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    13.333333% { -webkit-transform: matrix3d(1.02792, 0.0976, 0, 0, 0.06496, 1.02792, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.02792, 0.0976, 0, 0, 0.06496, 1.02792, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    16.666667% { -webkit-transform: matrix3d(1.09602, 0.02621, 0, 0, 0.01747, 1.09602, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.09602, 0.02621, 0, 0, 0.01747, 1.09602, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    20% { -webkit-transform: matrix3d(1.1117, -0.0094, 0, 0, -0.00627, 1.1117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.1117, -0.0094, 0, 0, -0.00627, 1.1117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    23.333333% { -webkit-transform: matrix3d(1.09709, -0.01805, 0, 0, -0.01203, 1.09709, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.09709, -0.01805, 0, 0, -0.01203, 1.09709, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    26.666667% { -webkit-transform: matrix3d(1.0698, -0.0143, 0, 0, -0.00954, 1.0698, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.0698, -0.0143, 0, 0, -0.00954, 1.0698, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    30% { -webkit-transform: matrix3d(1.04151, -0.00794, 0, 0, -0.0053, 1.04151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.04151, -0.00794, 0, 0, -0.0053, 1.04151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    33.333333% { -webkit-transform: matrix3d(1.01844, -0.00306, 0, 0, -0.00204, 1.01844, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.01844, -0.00306, 0, 0, -0.00204, 1.01844, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    36.666667% { -webkit-transform: matrix3d(1.00277, -0.00038, 0, 0, -0.00025, 1.00277, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00277, -0.00038, 0, 0, -0.00025, 1.00277, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    40% { -webkit-transform: matrix3d(0.99411, 0.00064, 0, 0, 0.00043, 0.99411, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99411, 0.00064, 0, 0, 0.00043, 0.99411, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    43.333333% { -webkit-transform: matrix3d(0.99083, 0.00076, 0, 0, 0.0005, 0.99083, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99083, 0.00076, 0, 0, 0.0005, 0.99083, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    46.666667% { -webkit-transform: matrix3d(0.991, 0.00053, 0, 0, 0.00035, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.991, 0.00053, 0, 0, 0.00035, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    50% { -webkit-transform: matrix3d(0.99292, 0.00027, 0, 0, 0.00018, 0.99292, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99292, 0.00027, 0, 0, 0.00018, 0.99292, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    53.333333% { -webkit-transform: matrix3d(0.99535, 0.00008, 0, 0, 0.00006, 0.99535, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99535, 0.00008, 0, 0, 0.00006, 0.99535, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    56.666667% { -webkit-transform: matrix3d(0.99755, -0.00001, 0, 0, 0, 0.99755, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99755, -0.00001, 0, 0, 0, 0.99755, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    60% { -webkit-transform: matrix3d(0.99919, -0.00004, 0, 0, -0.00002, 0.99919, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99919, -0.00004, 0, 0, -0.00002, 0.99919, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    63.333333% { -webkit-transform: matrix3d(1.0002, -0.00003, 0, 0, -0.00002, 1.0002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.0002, -0.00003, 0, 0, -0.00002, 1.0002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    66.666667% { -webkit-transform: matrix3d(1.00068, -0.00002, 0, 0, -0.00001, 1.00068, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00068, -0.00002, 0, 0, -0.00001, 1.00068, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    70% { -webkit-transform: matrix3d(1.00079, -0.00001, 0, 0, -0.00001, 1.00079, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00079, -0.00001, 0, 0, -0.00001, 1.00079, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    73.333333% { -webkit-transform: matrix3d(1.00069, 0, 0, 0, 0, 1.00069, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00069, 0, 0, 0, 0, 1.00069, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    76.666667% { -webkit-transform: matrix3d(1.00049, 0, 0, 0, 0, 1.00049, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00049, 0, 0, 0, 0, 1.00049, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    80% { -webkit-transform: matrix3d(1.00029, 0, 0, 0, 0, 1.00029, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00029, 0, 0, 0, 0, 1.00029, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    83.333333% { -webkit-transform: matrix3d(1.00013, 0, 0, 0, 0, 1.00013, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00013, 0, 0, 0, 0, 1.00013, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    86.666667% { -webkit-transform: matrix3d(1.00002, 0, 0, 0, 0, 1.00002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.00002, 0, 0, 0, 0, 1.00002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    90% { -webkit-transform: matrix3d(0.99996, 0, 0, 0, 0, 0.99996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99996, 0, 0, 0, 0, 0.99996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    93.333333% { -webkit-transform: matrix3d(0.99994, 0, 0, 0, 0, 0.99994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99994, 0, 0, 0, 0, 0.99994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    96.666667% { -webkit-transform: matrix3d(0.99994, 0, 0, 0, 0, 0.99994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99994, 0, 0, 0, 0, 0.99994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% {height: 100%; width: 100%;  -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+  }
+
+#clients .clientsBelt .clientUnit .clientFace {
+    min-width: 300px;
+    text-align: center;
+}
+
+#clients .clientsBelt .clientUnit .clientFace img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+#clients .clientsBelt .clientUnit .clientFace .clientName {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+#clients .clientsBelt .clientUnit .clientFace .clientTitle {
+    font-style: normal;
+    font-size: 12px;
+    color: #999;
+}
+
+#clients .clientsBelt .clientUnit .clientContent {
+    position: relative;
+}
+
+#clients .clientsBelt .clientUnit .clientContent .clientQuoteMark {
+    position: absolute;
+    top: -20px;
+    left: -60px;
+    width: 60px;
+    height: 60px;
+    z-index: -1;;
+    opacity: 0.3;
+}
+
+#clients .clientsBelt .clientUnit .clientContent .clientQuoteMark svg path {
+    fill: #c99065;
+}
+
+#clients .clientsBelt .clientUnit .clientContent p {
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 300;
+    margin-top: -10px;
+    color: #666;
+}
+
+#clients .clientsLogos {
+    position: relative;
+    max-width: 750px;
+    margin: 50px auto 50px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 5;
+}
+
+#clients .clientsLogos .clientLogo {
+    cursor: pointer;
+    margin: 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid transparent;
+    opacity: 0.5;
+}
+
+#clients .clientsLogos .activeClient {
+    border-color: #c99065;
+    opacity: 1;
+}
+
+@media screen and (max-width: 750px) {
+    #clients .clientControls {
+        display: none;
+    }
+
+    #clients .clientsMobileNav {
+        display: block;
+    }
+
+    #clients .clientsBelt .clientUnit.activeClient {
+        display: block;
+        position: relative;
+        margin-left: 0;
+        left: auto;
+    }
+
+    #clients .clientsBelt .clientUnit .clientFace {
+        margin-bottom: 30px;
+    }
+
+    #clients .clientsBelt .clientUnit .clientContent {
+        padding: 0px 30px;
+        max-width: 400px;
+        margin: 0px auto;
+    }
+
+    #clients .clientsLogos {
+        display: none;
+    }
+}
+
+
+/* contact section */
+
+#contact {
+    padding: 100px 0;
+    text-align: center;
+    width: 100%;
+    background-color: #e5eaee;
+}
+
+#contact h3 {
+    color: #e1c184;
+    margin-bottom: 30px;
+}
+
+#contact .socialLinks {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#contact .socialLinks a {
+    display: block;
+    background-color: #c99065;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: scale 0.5s ease;
+    margin: 20px;
+}
+
+#contact .socialLinks a:hover {
+    transform: scale(1.2);
+}
+
+#contact .bar {
+    width: 250px;
+    height: 4px;
+    background-color: #c99065;
+    margin: 50px auto;
+}
+
+#contact .bigLink {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 5vw;
+    font-weight: 300;
+    color: #e1c184;
+    line-height: 1;
+}
+
+
+
+/* contact form section */
+
+#contactForm {
+    padding: 100px 0;
+}
+
+#contactForm h3 {
+    text-align: center;
+    color: #e1c184;
+    margin-bottom: 30px;
+}
+
+#contactForm form {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+#contactForm form input, #contactForm form textarea {
+    border: 3px solid #c99065;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#contactForm form input:focus, #contactForm form textarea:focus {
+    outline: none;
+    border-color: #e1c184;
+}
+
+#contactForm form textarea {
+    resize: vertical;
+    height: 10em;
+}
+
+#contactForm form .contactInfoGroup label {
+    width: 50%;
+    float: left;
+}
+
+#contactForm form .contactInfoGroup label:nth-child(1) {
+    padding-right: 10px;
+}
+
+#contactForm form .contactInfoGroup label:nth-child(2) {
+    padding-left: 10px;
+}
+
+#contactForm form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#contactForm form label span {
+    display: block;
+}
+
+#contactForm form .submitWrap {
+    text-align: right;
+}
+
+#contactForm form input[type="submit"] {
+    background-color: #c99065;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 33%;
+}
+
+#contactForm form input[type="submit"]:hover {
+    background-color: #e1c184;
+}
+
+/* footer section */
+
+#goTop {
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    position: fixed;
+    z-index: 5;
+    bottom: 10px;
+    right: 10px;
+    background: transparent;
+}
+
+#goTop svg {
+    width: 50px;
+    height: 50px;
+}
+
+#goTop svg path {
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+#goTop:hover svg path {
+    fill: rgba(0, 0, 0, 0.7);
+}
+
+footer {
+    width: 100%;
+    background-image: url(../img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+footer .lockup {
+    padding: 50px 30px;
+}
+
+footer .lockup .logo {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0 30px 0 0;
+}
+
+footer .lockup .logo svg {
+    width: 50px;
+    height: 50px;
+}
+
+footer .lockup .logo svg path {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+footer .lockup .contentWrap {
+    float: left;
+}
+
+footer .lockup .contentWrap nav a {
+    display: inline-block;
+    margin: 0 30px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+footer .lockup .contentWrap nav a:hover {
+    color: rgba(0, 0, 0, 7);
+}
+
+footer .lockup .contentWrap .copyright {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.4);
+}
